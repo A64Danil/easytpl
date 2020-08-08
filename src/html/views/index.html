@@ -1,0 +1,224 @@
+<% var data = {
+title: "EasyTPL",
+author: "Danil X"
+}; %>
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <%= _.template(require('html-loader!./../includes/head.html'))(data) %>
+</head>
+<body>
+
+<%= _.template(require('html-loader!./../includes/header.html'))(data) %>
+
+
+<section class="mainPageStartScreen easytpl_firstScreen">
+
+    <div class="accOpeningWrapper servicesBgWrapper">
+        <div class="accOpeningBg servicesBg"></div>
+        <div class="mainService accOpening">
+            <div class="titleWrapper">
+                <p class="h3">Account opening</p>
+                <%= _.template(require('html-loader!./../includes/icons/arrow.html'))(data) %>
+            </div>
+
+            <p class="accOpeningDescr">Business account opening, covered by the FCA regulation for UK and non-UK companies. Legal, fast and easy</p>
+            <a href="account_opening.html" class="easytpl__btn easytpl__btn--orng">Get an account</a>
+        </div>
+    </div>
+
+    <div class="subBtnWrapper">
+        <a href="merchant_account.html" class="merchAccWrapper servicesBgWrapper">
+            <div class="merchAccBg servicesBg"></div>
+            <div class="mainService subBtn merchAcc">
+                <div class="titleWrapper">
+                    <p class="h5">Merchant account</p>
+                    <%= _.template(require('html-loader!./../includes/icons/arrow.html'))(data) %>
+                </div>
+
+            </div>
+        </a>
+
+        <a href="ewallet.html" class="eWalletWrapper servicesBgWrapper">
+            <div class="eWalletBg servicesBg"></div>
+            <div class="mainService subBtn eWallet">
+                <div class="titleWrapper">
+                    <p class="h5">E-Wallet</p>
+                    <%= _.template(require('html-loader!./../includes/icons/arrow.html'))(data) %>
+                </div>
+
+            </div>
+        </a>
+
+
+    </div>
+</section>
+
+<section class="mainDescBlock">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-1 col-xl-5 offset-xl-0">
+                <p class="easytpl__title"><span>EasytplUK</span> is&nbsp;a&nbsp;multi-asset meta bank for&nbsp;legal entities and&nbsp; individuals</p>
+            </div>
+            <div class="col-12 col-md-8 offset-md-2 col-lg-7 offset-lg-0">
+                <p class="easytpl__text easytpl__text--light">We are chasing to make life easier. We are finding the best progressive financial solutions and technologies, solving the difficulties and give you the joy of modern fintech+bank advantages.
+                </p>
+                <p class="easytpl__text easytpl__text--light">We choose and develop the best IT solutions for better user experience.</p>
+                <p class="easytpl__text easytpl__text--light">Our technical infrastructure fits accepted industry standards. The software we use is approved by the FCA.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="accountBlock">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 col-lg-12 offset-lg-0">
+                <div class="accountWrapper">
+                    <div class="accountAbout">
+                        <div class="easytpl__subTitle">EasyTPL UK Account</div>
+                        <div class="easytpl__text">UK Bank, direct payments in pounds, an individual IBAN optional on your demand, multi-language support.</div>
+                        <div class="accountCurrencies">
+                            <img src="img/gray_currencies/logo_fca.png" class="img-fluid" alt="Currencie FCA logo" title="FCA logo">
+                            <img src="img/gray_currencies/logo_pci.png" class="img-fluid" alt="Currencie PCI logo" title="PCI logo">
+                            <img src="img/gray_currencies/logo_bacs.png" class="img-fluid" alt="Currencie Bacs logo" title="Bacs logo">
+                            <img src="img/gray_currencies/logo_chaps.png" class="img-fluid" alt="Currencie Chaps logo" title="Chaps logo">
+                            <img src="img/gray_currencies/logo_fastpay.png" class="img-fluid" alt="Currencie Faster Payments logo" title="Faster Payments logo">
+                            <img src="img/gray_currencies/logo_directdebit.png" class="img-fluid" alt="Currencie Direct Debit logo" title="Direct Debit logo">
+                        </div>
+                        <a href="#" class="easytpl__link" >Read more about EasyTPL UK account
+                            <%= _.template(require('html-loader!./../includes/icons/arrow.html'))(data) %>
+                        </a>
+                    </div>
+                    <div class="accountPlusIcon">
+                        <%= _.template(require('html-loader!./../includes/icons/plus.html'))() %>
+                    </div>
+                    <div class="accountCompany">
+                        <div class="easytpl__subTitle easytpl__subTitle--white">UK Company</div>
+                        <div class="easytpl__text easytpl__text--white">Company registration, qualified individuals UK residents, registering address, bookkeeping, business advice.<br>
+Contact us for more information.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="serviceProvide serviceProvide--mainPage">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 offset-lg-1 offset-xl-0">
+                <div class="easytpl__title">Our service will provide you</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-0">
+                <div class="serviceItem">
+                    <div class="serviceItemVisible">
+                        <div class="serviceItem_img">
+                            <%= _.template(require('html-loader!./../includes/icons/account_simplicity.html'))(data) %>
+                        </div>
+                        <div class="serviceItem_text">
+                            <div class="easytpl__subTitle">Simplicity</div>
+                            <div class="easytpl__text easytpl__text--light">Our goal is to provide you powerful service in the easiest way.</div>
+                            <button class="moreDetails collapsed" data-toggle="collapse" data-target=".serviceProvideCollapse1" role="button" aria-expanded="false" aria-controls="serviceProvideCollapse1">
+                                More details  <%= _.template(require('html-loader!./../includes/icons/smallArrow.html'))() %>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse serviceProvideCollapse1 serviceItemHovered">
+                        <div class="serviceItemHovered__whiteTop"></div>
+                        <ul class="easytpl__list">
+                            <li>Quick and easy start</li>
+                            <li>Simple API</li>
+                            <li>Responsive support service</li>
+                            <li>Integration modules</li>
+                            <li>Comfortable interface</li>
+                            <li>100% online onboarding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-0">
+                <div class="serviceItem">
+                    <div class="serviceItemVisible">
+                        <div class="serviceItem_img">
+                            <%= _.template(require('html-loader!./../includes/icons/account_benefit.html'))(data) %>
+                        </div>
+                        <div class="serviceItem_text">
+                            <div class="easytpl__subTitle">Benefit</div>
+                            <div class="easytpl__text easytpl__text--light">We are chasing to provide you valuable benefits with our service.</div>
+                            <button class="moreDetails collapsed" data-toggle="collapse" data-target=".serviceProvideCollapse2" role="button" aria-expanded="false" aria-controls="serviceProvideCollapse2">
+                                More details  <%= _.template(require('html-loader!./../includes/icons/smallArrow.html'))() %>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse serviceProvideCollapse2 serviceItemHovered">
+                        <div class="serviceItemHovered__whiteTop"></div>
+                        <ul class="easytpl__list">
+                            <li>Friendly commission rates</li>
+                            <li>Free In-house transfers</li>
+                            <li>Friendly exchange rates</li>
+                            <li>Smart environment for Individuals</li>
+                            <li>Covering all your financial needs</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-0">
+                <div class="serviceItem">
+                    <div class="serviceItemVisible">
+                        <div class="serviceItem_img">
+                            <%= _.template(require('html-loader!./../includes/icons/account_reliability.html'))(data) %>
+                        </div>
+                        <div class="serviceItem_text">
+                            <div class="easytpl__subTitle">Reliability</div>
+                            <div class="easytpl__text easytpl__text--light">Security is the most of important for us. We value your trust.</div>
+                            <button class="moreDetails collapsed" data-toggle="collapse" data-target=".serviceProvideCollapse3" role="button" aria-expanded="false" aria-controls="serviceProvideCollapse3">
+                                More details  <%= _.template(require('html-loader!./../includes/icons/smallArrow.html'))() %>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse serviceProvideCollapse3 serviceItemHovered serviceItemHovered--last">
+                        <div class="serviceItemHovered__whiteTop"></div>
+                        <ul class="easytpl__list">
+                            <li>Highly reliable service</li>
+                            <li>FCA compliant</li>
+                            <li>Visa/Mastercard PCI DSS complaint</li>
+                            <li>PSD2 Compliant</li>
+                            <li>Reliable Banks only</li>
+                            <li>Instant notifications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="becomingClient">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-2 col-lg-4 offset-lg-1 col-xl-5 offset-xl-0">
+                <div class="easytpl__title">Become a client</div>
+                <div class="easytpl__text easytpl__text--mid">Apply for an account. Benefit our environment and services. Our team works hard every day to impress you.</div>
+            </div>
+            <div class="col-12 col-md-6 offset-md-2 col-lg-4 offset-lg-1">
+                <a href="#" class="easytpl__btn easytpl__btn--orng">Open corporate account</a>
+                <a href="#" class="easytpl__link" >Read more about Account opening UK  <%= _.template(require('html-loader!./../includes/icons/arrow.html'))(data) %></a>
+                <a href="#" class="easytpl__link" >Read more about Merchant account  <%= _.template(require('html-loader!./../includes/icons/arrow.html'))(data) %></a>
+                <a href="#" class="easytpl__btn easytpl__btn--orng">Open personal account</a>
+                <a href="#" class="easytpl__link" >Read more about E-Wallet  <%= _.template(require('html-loader!./../includes/icons/arrow.html'))(data) %></a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<%= _.template(require('html-loader!./../includes/footer.html'))(data) %>
+
+</body>
+</html>

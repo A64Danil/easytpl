@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="50px" viewBox="0 0 45 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-397.000000, -1048.000000)" stroke="#EF7D40">
+            <g transform="translate(196.000000, 924.000000)">
+                <g transform="translate(203.000000, 125.000000)">
+                    <g transform="translate(13.666667, 24.615385)">
+                        <path d="M3.52688172,14.6898263 C8.94119624,14.6898263 12.1236559,11.4636102 12.1236559,7.48387097 C12.1236559,4.05583519 9.76239289,1.18688469 5.64740311,0.457329783 C4.98514219,0.339916197 4.27745755,0.277915633 3.52688172,0.277915633" stroke-width="3" stroke-linecap="round" transform="translate(7.825269, 7.483871) scale(-1, 1) translate(-7.825269, -7.483871) "></path>
+                        <path d="M1.54301075,5.76861042 L10.8010753,5.76861042" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M1.54301075,8.38895782 L10.8010753,8.38895782" stroke-width="2" stroke-linecap="square"></path>
+                    </g>
+                    <path d="M9.91935484,0.655086849 L9.91935484,11.1364764" stroke-width="3" stroke-linecap="round"></path>
+                    <path d="M30.6693548,0.655086849 L30.6693548,11.1364764" stroke-width="3" stroke-linecap="round"></path>
+                    <path d="M0.661290323,17.6873449 L41,17.6873449" stroke-width="3" stroke-linecap="square"></path>
+                    <rect stroke-width="3" x="0" y="6.55086849" width="41" height="40.6153846" rx="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

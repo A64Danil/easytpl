@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="56px" viewBox="0 0 44 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g  transform="translate(-832.000000, -2127.000000)">
+            <g  transform="translate(149.000000, 1521.000000)">
+                <g  transform="translate(685.000000, 608.000000)">
+                    <path d="M7,43.25 L18.0146663,43.25"  stroke="#EF7D40" stroke-width="3" stroke-linecap="round"></path>
+                    <g >
+                        <rect  stroke="#EF7D40" stroke-width="3" x="0" y="0" width="40" height="52" rx="2"></rect>
+                        <path d="M7,36.25 L31.5,36.25"  stroke="#EF7D40" stroke-width="3" stroke-linecap="round"></path>
+                        <circle  fill="#EF7D40" cx="8.5" cy="27.5" r="3.5"></circle>
+                        <circle  fill="#EF7D40" cx="17.5" cy="16.5" r="3.5"></circle>
+                        <circle  fill="#EF7D40" cx="28.5" cy="24.5" r="3.5"></circle>
+                        <circle  fill="#EF7D40" cx="31.5" cy="9.5" r="3.5"></circle>
+                        <path d="M11.4790039,23.0698242 L13.3583984,20.1738281"  stroke="#EF7D40" stroke-width="3" stroke-linecap="round"></path>
+                        <path d="M21.1523438,19.3891602 L24.3813477,21.0844727"  stroke="#EF7D40" stroke-width="3" stroke-linecap="round"></path>
+                        <path d="M29.4199219,19.6894531 L30.7504883,14.2895508"  stroke="#EF7D40" stroke-width="3" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

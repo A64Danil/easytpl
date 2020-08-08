@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <g class="svg__close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g transform="translate(-971.000000, -257.000000)" stroke="#2E3F7F" stroke-width="2">
+            <g transform="translate(441.000000, 239.000000)">
+                <g transform="translate(531.000000, 19.000000)">
+                    <path d="M0.5,13.5 L13.5384048,0.46159519" id="Line-11"></path>
+                    <path d="M0.5,0.5 L13.6529464,13.6529464" id="Line-10"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

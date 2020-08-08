@@ -1,0 +1,737 @@
+// -----===== Imports, Mixins and Variables =====-----
+$base-color: #2E3F7F;
+$base-light-color: #1771F1;
+$second-color: #EF7D40;
+$nearWhite-color: #F4F8FD;
+
+$mainMobMarginTop: 60px;
+$mainMarginTop: 75px;
+
+
+$breakpoints: (
+        'xs': ('(min-width: 576px)'),
+        'sm': ('(min-width: 768px)'),
+        'md': ('(min-width: 992px)'),
+        'lg': ('(min-width: 1200px)'),
+        'xl': ('(min-width: 1600px)'),
+);
+
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @error 'Не указано значение для `#{$breakpoint}`';
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap&subset=cyrillic');
+
+//@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+//@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+//@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/utilities/display";
+@import "~bootstrap/scss/grid";
+//@import "~bootstrap/scss/tables";
+//@import "~bootstrap/scss/forms";
+//@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+//@import "~bootstrap/scss/dropdown";
+//@import "~bootstrap/scss/button-group";
+//@import "~bootstrap/scss/input-group";
+//@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+//@import "~bootstrap/scss/navbar";
+//@import "~bootstrap/scss/card";
+//@import "~bootstrap/scss/breadcrumb";
+//@import "~bootstrap/scss/pagination";
+//@import "~bootstrap/scss/badge";
+//@import "~bootstrap/scss/jumbotron";
+//@import "~bootstrap/scss/alert";
+//@import "~bootstrap/scss/progress";
+//@import "~bootstrap/scss/media";
+//@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+//@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+//@import "~bootstrap/scss/tooltip";
+//@import "~bootstrap/scss/popover";
+//@import "~bootstrap/scss/carousel";
+//@import "~bootstrap/scss/spinners";
+//@import "~bootstrap/scss/utilities";
+//@import "~bootstrap/scss/print";
+
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  // night mode - to work at night
+  //background-color: #444;
+  
+  font-family: 'Montserrat', sans-serif;
+
+  &.modal-open {
+    header {padding-right: 17px;}
+  }
+
+  & > section {
+    padding: 65px 10px;
+    @include respond-to('sm') {
+      padding: 160px 0;
+    }
+    @include respond-to('lg') {
+      padding: 180px 0;
+    }
+
+  }
+
+}
+
+// -----===== Base styles =====-----
+a, a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: unset;
+}
+
+.coloredBg {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+
+  &.coloredBg--w40 {width: 40%;}
+  &.coloredBg--w45 {width: 45%;}
+  &.coloredBg--w55 {width: 55%;}
+  &.coloredBg--w60 {width: 60%;}
+  &.coloredBg--w100 {width: 100%;}
+
+  &.coloredBg--right {
+    right: 0;
+  }
+
+  &.coloredBg--white {
+    background-color: #fff;
+  }
+
+  &.coloredBg--nearWhite {
+    background-color: $nearWhite-color;
+  }
+
+  &.coloredBg--whiteGrad {
+    background: linear-gradient(90deg, #F4F8FD 0%, rgba(244,248,253,0.43) 100%);
+  }
+
+  &.coloredBg--blue{
+    background-color: $base-light-color;
+  }
+
+  &.coloredBg--blueGrad {
+    background: linear-gradient(225.85deg, rgba(23,113,241,0.6) 0%, #2E3F7F 100%);
+  }
+
+  &.coloredBg--rotated {
+    width: 100%;
+    height: 50%;
+    top: 50%;
+
+    @include respond-to('sm') {
+      width: 50%;
+      height: 100%;
+      top: 0;
+    }
+  }
+}
+
+.easytpl__title {
+  color: $base-color;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+
+  @include respond-to('sm') {
+    //font-weight: 600;
+    font-size: 24px;
+    line-height: 42px;
+  }
+  @include respond-to('md') {
+    font-size: 24px;
+    line-height: 46px;
+  }
+  @include respond-to('lg') {
+    font-size: 30px;
+    line-height: 55px;
+  }
+  @include respond-to('xl') {
+    font-size: 36px;
+  }
+
+  &.easytpl__title--big {
+    font-size: 30px;
+
+    @include respond-to('sm') {font-weight: 600;}
+    @include respond-to('lg') {font-size: 42px;line-height: 46px;}
+    @include respond-to('xl') {font-size: 48px;line-height: 53px;margin-right: 40px;}
+  }
+  &.easytpl__title--light {
+    font-weight: 300;
+  }
+  &.easytpl__title--white {
+    color: #fff;
+  }
+  &.easytpl__title--blue {
+    color: $base-light-color;
+  }
+}
+
+.easytpl__subTitle {
+  color: $base-color;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  @include respond-to('sm') {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  @include respond-to('lg') {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  @include respond-to('xl') {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &.easytpl__subTitle--white {
+    color: #fff;
+  }
+}
+
+.easytpl__text {
+  font-size: 14px;
+  line-height: 24px;
+
+  @include respond-to('sm') {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  @include respond-to('lg') {
+    font-size: 18px;
+    line-height: 33px;
+    margin-bottom: 0.6rem;
+    margin-bottom: 8px;
+  }
+  @include respond-to('xl') {
+    margin-bottom: 1rem;
+  }
+  &.easytpl__text--white {
+    color: #fff;
+  }
+  &.easytpl__text--light {
+    font-weight: 300;
+  }
+  &.easytpl__text--bold {
+    font-weight: 700;
+  }
+  &.easytpl__text--mid {
+    @include respond-to('md') {font-size: 18px;}
+    @include respond-to('lg') {font-size: 20px;}
+    @include respond-to('xl') {font-size: 24px;}
+  }
+}
+
+// -----===== Common Blocks=====-----
+
+.googleMapBlock {
+  padding: 0;
+  height: 625px;
+}
+
+// -----===== Main Page =====-----
+.mainPageStartScreen {
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to('md') {
+    flex-direction: row;
+  }
+
+  .servicesBgWrapper {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: $nearWhite-color;
+    @include respond-to('md') {
+      background-color: unset;
+    }
+
+    .servicesBg {
+      position: absolute;
+      background: linear-gradient(225.24deg, rgba(23,113,241,0.36) 0%, $base-color 100%);
+      width: 325px;
+      height: 60px;
+      transition: all 0.5s ease-in;
+      bottom: 0;
+      border-top-right-radius: 20px;
+
+      @include respond-to('sm') {height: 45px;}
+      @include respond-to('lg') {width: 460px;height: 62px;}
+
+
+      &.accOpeningBg {
+        border-top-right-radius: 0px;
+        transition: all 0.5s ease-in;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    // Main Screen Animation
+    &.OFF:hover {
+      .servicesBg {
+        @include respond-to('md') {
+          width: 100%;
+          height: 100%;
+          border-top-right-radius: 0px;
+          &.accOpeningBg {
+            width: 100%;
+            height: 70%;
+          }
+        }
+
+      }
+      .mainService {
+        @include respond-to('md') {
+          padding-right: 0;
+        }
+
+        .titleWrapper {
+          width: 100%;
+          @include respond-to('md') {
+            padding-right: 40px;
+          }
+
+          .h5 {
+            @include respond-to('md') {
+              margin-right: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .subBtnWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: $base-light-color;
+    @include respond-to('sm') {
+      flex-direction: row;
+      color: #fff;
+    }
+    @include respond-to('md') {
+      flex-direction: column;
+      width: 43.5%;
+    }
+
+    .merchAccWrapper {
+      @include respond-to('sm') {
+        background-image: url("../img/bg/mainpage/start_merchant.jpg");
+      }
+    }
+    .eWalletWrapper {
+      @include respond-to('sm') {
+        background-image: url("../img/bg/mainpage/start_wallet.jpg");
+      }
+    }
+
+
+    .servicesBgWrapper {
+      &:first-of-type {
+        border-bottom: 2px solid $base-light-color;
+        @include respond-to('sm') {
+          border-bottom: none;
+        }
+      }
+      .servicesBg {
+        display: none;
+        @include respond-to('sm') {
+          display: block;
+        }
+      }
+    }
+
+
+
+  }
+
+  .accOpeningWrapper {
+    background-image: url("../img/bg/mainpage/start_account.jpg");
+
+    @include respond-to('md') {
+      width: 56.5%;
+    }
+  }
+
+  .mainService {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    @include respond-to('sm') {
+      min-height: 200px;
+    }
+    .titleWrapper {
+      display: flex;
+      align-items: center;
+      //justify-content: space-between;
+      padding: 17px 25px;
+
+      @include respond-to('sm') {
+        padding: 9px 40px;
+      }
+      @include respond-to('lg') {
+        padding: 12px 40px;
+      }
+      p {
+        margin-right: 27px;
+        margin-bottom: 0;
+      }
+
+      svg {
+        .svg__arrow {
+          fill: $second-color;
+        }
+      }
+    }
+
+    &.accOpening {
+
+      padding: 95px 30px 45px 25px;
+      @include respond-to('sm') {
+        padding: 100px calc(100% - 720px * 9 / 12) 80px calc(100% - 680px * 11 / 12);
+      }
+      @include respond-to('md') {
+        padding: 0 40px 100px calc(100% - 910px * 6 / 12 );
+        height: 100%;
+      }
+      @include respond-to('lg') {
+        padding: 0 50px 150px calc(100% - 1115px * 7 / 12 );
+      }
+      @include respond-to('xl') {
+        padding: 0 50px 170px calc(100% - 1115px * 7 / 12 );
+      }
+
+
+      .titleWrapper {
+        margin-bottom: 30px;
+        padding: 0;
+
+        align-items: unset;
+        @include respond-to('sm') {
+          align-items: center;
+        }
+        .h3 {
+          max-width: 130px;
+          margin-right: 15px;
+          font: {
+            size: 24px;
+            weight: 500;
+          }
+
+          @include respond-to('sm') {
+            max-width: unset;
+            margin-right: 27px;
+            font-size: 30px;
+          }
+
+          @include respond-to('md') {
+            font-size: 30px;
+            line-height: 37px;
+          }
+
+          @include respond-to('lg') {
+            font-size: 42px;
+          }
+          @include respond-to('xl') {
+            font: {
+              size: 48px;
+            }
+          }
+        }
+
+        svg {
+          width: 22px;
+          height: 22px;
+          margin-top: 5px;
+          @include respond-to('sm') {
+            margin-top: 0;
+          }
+          @include respond-to('lg') {
+            width: auto;
+            height: auto;
+          }
+        }
+      }
+
+      .accOpeningDescr {
+        margin-bottom: 30px;
+        text-transform: none;
+        font-size: 16px;
+        line-height: 25px;
+        @include respond-to('sm') {
+          font-size: 18px;
+          line-height: 30px;
+        }
+        @include respond-to('md') {
+          line-height: 33px;
+          margin-bottom: 95px;
+          width: 310px;
+        }
+        @include respond-to('lg') {
+          font-size: 20px;
+          line-height: 36px;
+          width: 430px;
+        }
+        @include respond-to('xl') {
+          font-size: 24px;
+          width: 450px;
+        }
+      }
+
+      a {
+        min-width: 260px;
+      }
+    }
+
+    &.subBtn {
+
+      padding: 0 calc(100% - 1105px * 5 / 12 ) 0 0;
+
+      @include respond-to('sm') {
+        height: 320px;
+      }
+
+      @include respond-to('md') {
+        height: calc(50vh - 35px);
+      }
+
+      .titleWrapper {
+        width: 100%;
+        .h5 {
+          transition: all 0.5s ease-in;
+          margin-bottom: 0;
+          font-weight: 600;
+          font-size: 16px;
+
+          @include respond-to('md') {
+            font-size: 18px;
+          }
+          @include respond-to('lg') {
+            font-size: 20px;
+          }
+          @include respond-to('xl') {
+            font-size: 24px;
+          }
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+          transition: all 0.5s ease-in;
+
+        }
+      }
+
+    }
+  }
+}
+
+.mainDescBlock {
+  padding: 50px 10px;
+
+  @include respond-to('sm') {
+    padding: 120px 0;
+  }
+  @include respond-to('md') {
+    padding: 100px 0;
+  }
+  @include respond-to('lg') {
+    padding: 180px 0;
+  }
+  .easytpl__title {
+    span {
+      @include respond-to('xl') {
+        display: block;
+      }
+    }
+  }
+  .mainDescBlock__descr {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 31px;
+  }
+}
+
+.accountBlock {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,f4f8fd+50,f4f8fd+100 */
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(244,248,253,1) 25%, rgba(244,248,253,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 25%,rgba(244,248,253,1) 25%,rgba(244,248,253,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 25%,rgba(244,248,253,1) 25%,rgba(244,248,253,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f8fd',GradientType=0 ); /* IE6-9 */
+  padding: 0;
+
+  @include respond-to('md') {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,f4f8fd+50,f4f8fd+100 */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(244,248,253,1) 50%, rgba(244,248,253,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(244,248,253,1) 50%,rgba(244,248,253,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(244,248,253,1) 50%,rgba(244,248,253,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f8fd',GradientType=0 ); /* IE6-9 */
+  }
+  
+  
+  .accountWrapper {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: -5px 5px 22px 0 #C4C1D0;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to('md') {
+      flex-direction: row;
+    }
+
+    & > div {
+      padding: 45px 45px 45px 40px;
+      @include respond-to('sm') {
+        padding: 55px 70px 45px 110px
+      }
+      @include respond-to('md') {
+        width: 50%;
+        padding: 75px 8.3% 45px;
+      }
+      & > div {
+        margin-bottom: 30px;
+      }
+    }
+
+    .accountAbout {
+      background-color: #fff;
+      @include respond-to('sm') {
+        padding-bottom: 55px;
+      }
+      .accountCurrencies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          max-height: 17px;
+          max-width: 40px;
+          opacity: 0.6;
+          @include respond-to('sm') {
+            max-height: 20px;
+            max-width: 46px;
+          }
+          @include respond-to('md') {
+            max-height: 25px;
+            max-width: 60px;
+          }
+        }
+      }
+    }
+    .accountCompany {
+      background-color: $base-light-color;
+    }
+    .accountPlusIcon{
+      padding: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include respond-to('md') {
+        width: 0;
+        justify-content: flex-start;
+      }
+
+      svg {
+        position: absolute;
+        @include respond-to('sm') {
+          width: 45px;
+          height: 46px;
+        }
+        @include respond-to('md') {
+          width: 55px;
+          height: 56px;
+          transform: translate(-50%, 0px);
+        }
+      }
+    }
+
+    .easytpl__text {
+
+      @include respond-to('sm') {
+        width: 225px;
+      }
+      @include respond-to('md') {
+        width: auto;
+      }
+
+    }
+  }
+}
+
+.serviceProvide--mainPage {
+  .serviceItem {
+
+    .serviceItemHovered {
+      ul {
+      }
+    }
+
+  }
+
+}
+
+
+// -----===== Footer =====-----
+footer {
+  background: linear-gradient(227.22deg, #1771F1 0%, $base-color 100%);
+  padding: 40px 0;
+  line-height: 32px;
+  color: $nearWhite-color;
+  font-size: 14px;
+
+  @include respond-to('sm') {
+    padding: 50px 0 60px;
+  }
+
+}

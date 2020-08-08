@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="59px" viewBox="0 0 40 59" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g  transform="translate(-566.000000, -2123.000000)">
+            <g  transform="translate(149.000000, 1521.000000)">
+                <g  transform="translate(417.000000, 602.000000)">
+                    <rect  stroke="#EF7D40" stroke-width="3" x="1.5" y="1.5" width="37" height="55.1818182" rx="5"></rect>
+                    <path d="M2.36150568,45.8368845 L37.7616004,45.8368845"  stroke="#EF7D40" stroke-width="3"></path>
+                    <path d="M16.4382102,50.7220644 L23.7452652,50.7220644"  stroke="#EF7D40" stroke-width="3" stroke-linecap="round"></path>
+                    <polyline  stroke="#EF7D40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="26.9045928 23.030303 11.7459754 23.030303 13.8257576 31.813447 24.4803504 31.813447 28.2066761 17.0857008 31.936553 17.0857008"></polyline>
+                    <circle  fill="#EF7D40" cx="15.7575758" cy="37.5757576" r="2.42424242"></circle>
+                    <circle  fill="#EF7D40" cx="23.030303" cy="37.5757576" r="2.42424242"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
